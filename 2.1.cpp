@@ -11,12 +11,10 @@ private:
     float totalSalary;
 
 public:
-    // Default constructor
     Employee() : empId(0), name("Unknown"), basicSalary(0), bonus(0), totalSalary(0) {
         cout << "Default constructor called" << endl;
     }
 
-    // Parameterized constructor
     Employee(int id, string n, float salary, float b) {
         empId = id;
         name = n;
@@ -26,12 +24,10 @@ public:
         cout << "Parameterized constructor called" << endl;
     }
 
-    // Member function to calculate salary
     void calculateTotalSalary() {
         totalSalary = basicSalary + bonus;
     }
 
-    // Member function to display details
     void display() const {
         cout << "Employee ID: " << empId << endl;
         cout << "Name: " << name << endl;
@@ -42,13 +38,9 @@ public:
 };
 
 int main() {
-    // Creating object using default constructor
     Employee emp1;
     emp1.display();
 
-    cout << endl; // Added for cleaner output spacing
-
-    // Creating object using parameterized constructor
     Employee emp2(101, "John Doe", 50000, 10000);
     emp2.display();
 
