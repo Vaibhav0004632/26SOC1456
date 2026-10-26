@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+class person {
+public:
+    void display() {
+        cout << "Name is vaibhav\n";
+        cout << "Age is 25\n";
+    }
+};
+
+class salary {
+public:
+    void calculate() {
+        cout << "Basic salary is 50000\n";
+        cout << "Perks are of 5000\n";
+        int Total_salary = 50000 + 5000;
+        cout << "Total Salary=" << Total_salary << endl;
+    }
+};
+
+class Employee : public person, public salary {
+public:
+    void show() {
+        cout << "Department is IT department\n";
+        cout << "EmployeeID is 12345\n";
+    }
+};
+
+int main() {
+    Employee obj;
+    obj.display();
+    obj.calculate();
+    obj.show();
+    return 0;
+}
