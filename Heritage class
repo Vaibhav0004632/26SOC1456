@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+class shape {
+public:
+    void display() {
+        cout << "This is a shape\n";
+    }
+};
+
+class Rectangle : public shape {
+public:
+    void calculate() {
+        cout << "Shape is Rectangle\n";
+    }
+};
+
+class circle : public shape {
+public:
+    void show() {
+        cout << "Shape is Circle\n";
+    }
+};
+
+int main() {
+    Rectangle rec;
+    rec.display();
+    rec.calculate();
+
+    circle cir;
+    cir.display();
+    cir.show();
+
+    return 0;
+}
